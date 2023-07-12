@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-dark text-white">
+    <div class="container py-5">
+        <div class="form mb-4">
+            <div class="mb-4">
+                <label for="productName" class="mb-3 fs-5">productName</label>
+                <input type="text" name="productName" placeholder="product Name" class="form-control" id="productName">
+                <p class="fs-3 bg-danger text-center mt-3 d-none" id="validateName">product Name must begin with upper charchter and most 8 charchter</p>
+            </div>
+            <div class="mb-4">
+                <label for="productPrice" class="mb-3 fs-5">productPrice</label>
+                <input type="number" name="productPrice" placeholder="product Price" class="form-control"
+                    id="productPrice">
+                    <p class="fs-3 bg-danger text-center mt-3 d-none" id="validatePrice">product Price must start 1000$</p>
+            </div>
+            <div class="mb-4">
+                <label for="productCategory" class="mb-3 fs-5">productCategory</label>
+                <input type="text" name="productCategory" placeholder="product Category" class="form-control"
+                    id="productCategory">
+            </div>
+            <div class="mb-4">
+                <label for="productDesc" class="mb-3 fs-5">productDesc</label>
+                <textarea name="productDesc" id="productDesc" class="form-control"></textarea>
+            </div>
+            <button onclick="addProduct()" class="btn btn-outline-primary w-100" id="addBtn">add product</button>
+            <button onclick="updateForm()" class="btn btn-outline-warning w-100 d-none" id="updateBtn">Update
+                product</button>
+        </div>
+        <h2 class="my-4 ">SEARCH .....</h2>
+        <input type="text" oninput="search(this.value)" class="form-control w-75 mx-auto mb-3">
+        <table class="table text-white text-center">
+            <thead class="fw-bolder">
+                <th>Index</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Category</th>
+                <th>Desc</th>
+                <th>Update</th>
+                <th>Delete</th>
+            </thead>
+            <tbody id="tbody">
+
+            </tbody>
+        </table>
+    </div>
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
